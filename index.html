@@ -1,32 +1,20 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>🔴 Deshika Jayantha Live 🔴</title>  
-        <!-- Include hls.js from a CDN -->
-        <script src="https://cdn.tutorialjinni.com/hls.js/1.2.1/hls.min.js"></script>
-      
-    </head>
-    <body style="background-color:#300070;">
+<head>
+<title>LIVE IPTV by DeshikaJ</title>
+<script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+<link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+</head>
 <center>
-<h1 style="font-family:arial"><font color="white">ICC CRICKET WORLD CUP 2023 - LIVE HD</h1>
-        <!-- HTML5 Video Tag -->
-        <video id="video" 
-               width='60%' controls autoplay
-               src="http://103.2.153.38/trans1sd/smil:starsports1.smil/chunklist.m3u8">
-        </video>
-        <!-- Invocation Script -->
-        <script>
-            if (Hls.isSupported()) {
-              var video = document.getElementById('video');
-              var hls = new Hls();
-              hls.loadSource(video.src);
-              hls.attachMedia(video);
-            }else{
-                alert("Cannot stream HLS, use another video source");
-            }
-        </script>
-<h2 style="font-family:arial">Not working?<br>Contact me on Telegram<br>@deshikajayantha</h2>
-<marquee><h3  style="font-family:arial">Hi. I'm Deshika Jayantha. Welcome to my GitHub Page. You can watch ICC Cricket World Cup 2023 Live from this.</marquee>
+<video id='live-video' class='video-js   vjs-default-skin    vjs-live  vjs-liveui'    width='640' height='360'  controls  muted>
+</video>
+
+<script>
+   var  player = videojs('live-video', {liveui: true} );
+   player.src({ src:'http://103.2.153.38/trans1sd/smil:starsports1.smil/chunklist.m3u8', type:'application/x-mpegurl'});
+   player.play();
+  
+</script>
 </center>
-    </body>
+</body>
 </html>
