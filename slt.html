@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>🔴 Deshika Jayantha IPTV 🔴</title>  
+        <!-- Include hls.js from a CDN -->
+        <script src="https://cdn.tutorialjinni.com/hls.js/1.2.1/hls.min.js"></script>
+      
+    </head>
+    <body>
+<center>
+        <video id="video" 
+               width='60%' controls autoplay muted
+               src="https://sltlivetestgcp.yuppcdn.net/120623/smil:eventtv.smil/playlist.m3u8">
+        </video>
+        <script>
+            if (Hls.isSupported()) {
+              var video = document.getElementById('video');
+              var hls = new Hls();
+              hls.loadSource(video.src);
+              hls.attachMedia(video);
+            }else{
+                alert("Cannot stream HLS, use another video source");
+            }
+        </script>
+<h2> unmute on player</h2>
+</center>
+    </body>
+</html>
